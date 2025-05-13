@@ -100,7 +100,7 @@ def format_output_to_table(data):
     df.to_csv("drug_asset_summary.csv", index=False)
     try:
         import tabulate
-        with open(f"{ticker.upper()}_drug_asset_summary.md", "w") as f:
+        with open("drug_asset_summary.md", "w") as f:
             f.write(df.to_markdown())
     except ImportError:
         logging.warning("tabulate not installed")
