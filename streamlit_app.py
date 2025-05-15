@@ -10,7 +10,7 @@ st.markdown(
 
 # Sidebar input
 with st.sidebar:
-    st.header("📥 Input Settings")
+    st.header(" Input Settings")
     if "ticker" not in st.session_state:
         st.session_state.ticker = ""
     ticker = st.text_input("Enter a biotech stock ticker (e.g., WVE, ALNY)", value=st.session_state.ticker)
@@ -34,7 +34,7 @@ df = st.session_state.get("df")
 md_text = st.session_state.get("md_text")
 
 if df is not None and not df.empty:
-    st.success("✅ Extraction complete!")
+    st.success("Extraction complete!")
 
     # Show summary metrics
     col1, col2 = st.columns(2)
@@ -62,7 +62,7 @@ if df is not None and not df.empty:
             mime="text/markdown"
         )
 
-        # ✅ Keep original Markdown preview untouched
+        # Keep original Markdown preview untouched
         with st.expander("📝 Markdown Preview"):
             st.code(md_text, language='markdown')
 
