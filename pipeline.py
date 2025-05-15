@@ -177,10 +177,10 @@ if __name__ == "__main__":
         df = main_pipeline(ticker)
         if df is not None:
             df.to_csv(f"{ticker}_drug_asset_summary.csv", index=False)
-            print(f"✅ Results saved for {ticker} in '{ticker}_drug_asset_summary.csv'")
+            print(f" Results saved for {ticker} in '{ticker}_drug_asset_summary.csv'")
         else:
             print(f"⚠️ No data returned for {ticker}.")
     except Exception as e:
-        logging.error(f"❌ Error while processing ticker {ticker}: {e}")
+        logging.error(f" Error while processing ticker {ticker}: {e}")
 
 
