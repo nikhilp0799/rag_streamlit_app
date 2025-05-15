@@ -169,7 +169,7 @@ if __name__ == "__main__":
     ticker = input("Enter a valid biotech stock ticker (e.g., ALNY, GILD, WVE): ").strip().upper()
 
     if not ticker:
-        print("⚠️ No ticker entered. Exiting.")
+        print("No ticker entered. Exiting.")
         exit()
 
     try:
@@ -179,7 +179,7 @@ if __name__ == "__main__":
             df.to_csv(f"{ticker}_drug_asset_summary.csv", index=False)
             print(f" Results saved for {ticker} in '{ticker}_drug_asset_summary.csv'")
         else:
-            print(f"⚠️ No data returned for {ticker}.")
+            print(f"No data returned for {ticker}.")
     except Exception as e:
         logging.error(f" Error while processing ticker {ticker}: {e}")
 
